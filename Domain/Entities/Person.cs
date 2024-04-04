@@ -50,15 +50,15 @@ namespace Domain.Entities
 
             string pattern = @"^[a-zA-Zа-яА-Я]+$";
 
-            if (!Regex.IsMatch(fullName.FirstName, pattern)) throw new ArgumentException(ValidetorsMessages.IsRight);
+            if (!Regex.IsMatch(fullName.FirstName, pattern)) throw new ArgumentException(ValidationMessages.IsRight);
             
-            if (!Regex.IsMatch(fullName.LastName, pattern)) throw new ArgumentException(ValidetorsMessages.IsRight);
+            if (!Regex.IsMatch(fullName.LastName, pattern)) throw new ArgumentException(ValidationMessages.IsRight);
             
             if (fullName.MiddleName is not null)
             {
-                if (fullName.MiddleName == string.Empty) throw new ArgumentException(ValidetorsMessages.IsNullOrEmpty);
+                if (fullName.MiddleName == string.Empty) throw new ArgumentException(ValidationMessages.IsNull);
                 
-                if (!Regex.IsMatch(fullName.MiddleName, pattern)) throw new ArgumentException(ValidetorsMessages.IsRight);
+                if (!Regex.IsMatch(fullName.MiddleName, pattern)) throw new ArgumentException(ValidationMessages.IsRight);
             }
             return fullName;
         }
@@ -71,7 +71,7 @@ namespace Domain.Entities
         /// <exception cref="ArgumentException"></exception>
         private DateTime ValidateBirthDay(DateTime birthDay)
         {
-            if (birthDay.Year<DateTime.Today.Year - 150) throw new ArgumentException(ValidetorsMessages.IsRight);
+            if (birthDay.Year<DateTime.Today.Year - 150) throw new ArgumentException(ValidationMessages.IsRight);
             return birthDay;
         }
 
@@ -88,7 +88,7 @@ namespace Domain.Entities
             //\+373 77 обозначает первые 6 символов, которые должны быть "+373 77".
             //[4 - 9] требует, чтобы следующий символ после "+373 77" был в диапазоне от 4 до 9.
             //\d{ 5} указывает на 5 последующих цифр.
-            if (!Regex.IsMatch(phoneNumber, phonePattern)) throw new ArgumentException(ValidetorsMessages.IsRight);
+            if (!Regex.IsMatch(phoneNumber, phonePattern)) throw new ArgumentException(ValidationMessages.IsRight);
             return phoneNumber;
         }
 
@@ -101,7 +101,7 @@ namespace Domain.Entities
         private string ValidateTelegram(string telegram)
         {
             string telegramPattern = "^@";
-            if (!Regex.IsMatch(telegram, telegramPattern)) throw new ArgumentException(ValidetorsMessages.IsRight);
+            if (!Regex.IsMatch(telegram, telegramPattern)) throw new ArgumentException(ValidationMessages.IsRight);
             return telegram;
         }
     }
