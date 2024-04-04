@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kIxDZ5EoIE9DFyzVzKt51wzEwQHKFILALU1z/jlj95+0gk0+XSSF/gBJVVbGRDAhpVxXYEFnYC2yFDuG1zViOw==",
+  "success": true,
+  "projectFilePath": "D:\\Рабочий стол\\VS project\\TelegamBot\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anna\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
