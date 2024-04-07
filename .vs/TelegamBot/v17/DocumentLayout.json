@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\",
+  "WorkspaceRootPath": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\vs project\\telegambot\\domain\\primitives\\validetorsmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\primitives\\validetorsmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\git\\telegambot\\domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\vs project\\telegambot\\domain\\primitives\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\git\\telegambot\\domain\\primitives\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\primitives\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\vs project\\telegambot\\domain\\valueobject\\basevalueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\git\\telegambot\\domain\\valueobject\\basevalueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\valueobject\\basevalueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\vs project\\telegambot\\domain\\valueobject\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\git\\telegambot\\domain\\valueobject\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\valueobject\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\vs project\\telegambot\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\git\\telegambot\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\vs project\\telegambot\\domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{647FAF51-FF79-4322-A11E-E31963AC1E75}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,15 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Gender.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Primitives\\Gender.cs",
+              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\Primitives\\Gender.cs",
               "RelativeDocumentMoniker": "Domain\\Primitives\\Gender.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Primitives\\Gender.cs",
+              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\Primitives\\Gender.cs",
               "RelativeToolTip": "Domain\\Primitives\\Gender.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -53,63 +49,47 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "FullName.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\ValueObject\\FullName.cs",
+              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\ValueObject\\FullName.cs",
               "RelativeDocumentMoniker": "Domain\\ValueObject\\FullName.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\ValueObject\\FullName.cs",
+              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\ValueObject\\FullName.cs",
               "RelativeToolTip": "Domain\\ValueObject\\FullName.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T16:12:41.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T16:12:41.025Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "BaseValueObject.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\ValueObject\\BaseValueObject.cs",
+              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\ValueObject\\BaseValueObject.cs",
               "RelativeDocumentMoniker": "Domain\\ValueObject\\BaseValueObject.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\ValueObject\\BaseValueObject.cs",
+              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\ValueObject\\BaseValueObject.cs",
               "RelativeToolTip": "Domain\\ValueObject\\BaseValueObject.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T16:11:55.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidetorsMessages.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Primitives\\ValidetorsMessages.cs",
-              "RelativeDocumentMoniker": "Domain\\Primitives\\ValidetorsMessages.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Primitives\\ValidetorsMessages.cs",
-              "RelativeToolTip": "Domain\\Primitives\\ValidetorsMessages.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T16:16:47.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T16:11:55.232Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Entities\\BaseEntity.cs",
+              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\BaseEntity.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\Entities\\BaseEntity.cs",
               "RelativeToolTip": "Domain\\Entities\\BaseEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T16:16:58.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T16:16:58.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Person.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Entities\\Person.cs",
+              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\Entities\\Person.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Person.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\VS project\\TelegamBot\\Domain\\Entities\\Person.cs",
+              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Git\\TelegamBot\\Domain\\Entities\\Person.cs",
               "RelativeToolTip": "Domain\\Entities\\Person.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAkwGUAAAAFAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAwGUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T16:16:01.551Z",
               "EditorCaption": ""

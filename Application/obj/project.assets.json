@@ -73,11 +73,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\Рабочий стол\\Git\\TelegamBot\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Application\\Application.csproj",
+      "projectPath": "D:\\Рабочий стол\\Git\\TelegamBot\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
-      "outputPath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Application\\obj\\",
+      "outputPath": "D:\\Рабочий стол\\Git\\TelegamBot\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,8 +94,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj"
+            "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj"
             }
           }
         }
