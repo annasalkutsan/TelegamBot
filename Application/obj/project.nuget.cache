@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "z2O0934Kpo4bzdv8v+abmLzmuMOKRKJTfTrvJmr8xxujShr32X6GnozX0W84Y3I+SlxscI9pdy3D7yF1f3MJKw==",
+  "dgSpecHash": "jv8DObkvJ1FYNDMwNo2EAvkg8P6Z36lkLQLvOydB0vvYjAeYrL9mU0Bu0Ul0Sg90jWPz/3NZKQLT4kc/6e01Mw==",
   "success": true,
-  "projectFilePath": "D:\\Рабочий стол\\Git\\TelegamBot\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Anna\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
+    "C:\\Users\\Anna\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

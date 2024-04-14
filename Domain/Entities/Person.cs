@@ -34,6 +34,7 @@ namespace Domain.Entities
         public string PhoneNumber { get; set; }
         public string Telegram { get; set; }
         public Gender Gender { get; set; }
+        public List<CustomField<string>> CustomFields { get; set; }
 
         ///TODO: Посмотреть в сторону fluenValidator, анализ Guard в чем отличие
 
