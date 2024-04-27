@@ -43,9 +43,16 @@ namespace Application.Services
             return createdDto; // Возвращаем DTO
         }
         
-        public PersonGetByResponse Update(Guid id, PersonUpdateRequest personDto)
+        public PersonUpdateResponse Update(PersonUpdateRequest personUpdateRequest)
         {
-            var existingPerson = _personRepository.GetById(id);
+            var person = _personRepository.GetById(personUpdateRequest.Id);
+
+            person.Update(personUpdateRequest.FirstName, personUpdateRequest.LastName, personUpdateRequest.MiddleName,
+                personUpdateRequest.PhoneNumber);
+            var personResponse = _personRepository.Update(person);
+            var response = _mapper.Map<PersonUpdateResponse>(personResponse);
+            return response;
+            /*var existingPerson = _personRepository.GetById(id);
             if (existingPerson == null)
             {
                 throw new Exception("Пользователь не найден");
@@ -55,7 +62,7 @@ namespace Application.Services
             _personRepository.Update(existingPerson);
 
             var updatedDto = _mapper.Map<PersonGetByResponse>(existingPerson);
-            return updatedDto;
+            return updatedDto;*/
         }
 
         public bool Delete(Guid id)
