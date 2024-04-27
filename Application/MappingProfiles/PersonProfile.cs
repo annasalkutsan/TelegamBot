@@ -19,8 +19,8 @@ namespace Application.MappingProfiles
             //PersonCreateRequest в Person
             CreateMap<PersonCreateRequest, Person>();
 
-            //PersonUpdateRequest в PersonUpdateResponse
-            CreateMap<PersonUpdateRequest, PersonUpdateResponse>();
+            //PersonUpdateRequest в Person
+            CreateMap<PersonUpdateRequest, Person>();
 
             //Person в список пользовательских полей
             //ConvertUsing -- для явного указания способа преобразования одного объекта в другой при маппинге
