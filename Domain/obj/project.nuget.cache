@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WVVElLLYhwBmbPxYbahrczQOzSiRmVSvOwGRuamSVmSRWwkBWULtq4jfigHpMYsKKOQ0Dzsxa5W3L0SjhKKnTg==",
+  "dgSpecHash": "D8dcBDFDL6k25kB0sq4yvzc3wu8qMCKuWHsibHT/uaOQQFxjUFk3CSBuaGK/Dtz2mWgkGT7MZS2bCpbheYNikA==",
   "success": true,
-  "projectFilePath": "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anna\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
   ],

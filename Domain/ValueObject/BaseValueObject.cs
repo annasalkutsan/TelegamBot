@@ -12,42 +12,39 @@ namespace Domain.ValueObject
     /// </summary>
     public abstract class BaseValueObject
     {
+        /// <summary>
+        /// Реализует сравнение DeepCompare
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object? obj)
         {
-            if (obj is not BaseValueObject entity || entity == null)
+            if (obj == null)
+            {
                 return false;
+            }
 
-            var serialEnti = Serialize(entity);
-            var serialThis = Serialize(this);
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
 
-            ///TODO: Разобраться в String.Compare
-            if (String.Compare(serialEnti, serialThis) != 0)
-                return false;
+            var json = JsonSerializer.Serialize(this);
+            var otherJson = JsonSerializer.Serialize(obj);
 
-            return true;
+            var compare = String.Compare(json, otherJson, StringComparison.InvariantCultureIgnoreCase);
+
+            return compare == 0;
         }
 
         /// <summary>
-        /// Переопределение метода для получения хэш-кода объекта.
+        /// Получает HashCode из сериализаованной сущности
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
         {
-            //TODO:Реализовать getHashCode
-            //У string получать код легче + 
-            return Serialize(this).GetHashCode();
+            var json = JsonSerializer.Serialize(this);
+            return json.GetHashCode();
         }
-
-        /// <summary>
-        /// Сериализация данных в json
-        /// </summary>
-        /// <param name="valueObjects"></param>
-        /// <returns></returns>
-        private string Serialize(BaseValueObject valueObjects)
-        {
-            var serializedObjects = JsonSerializer.Serialize(valueObjects);
-            return serializedObjects;
-        }
-        
     }
 }
