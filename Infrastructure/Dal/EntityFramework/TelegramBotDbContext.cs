@@ -6,8 +6,10 @@ namespace Infrastructure.Dal.EntityFramework;
 
 public class TelegramBotDbContext : DbContext
 {
+    public TelegramBotDbContext(DbContextOptions<TelegramBotDbContext> options) : base(options)
+    {
+    }
     public DbSet<Person> Persons { get; set; }
-    
     public DbSet<CustomField<string>> CustomFields { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

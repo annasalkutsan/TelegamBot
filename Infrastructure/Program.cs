@@ -1,9 +1,27 @@
+using Application.Interfaces;
+using Application.Services;
+using Infrastructure.Dal.EntityFramework;
+using Infrastructure.Dal.Repositoryes;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers();
+//получение строки подключения из конфигурационного файла
+var connectionString = builder.Configuration.GetConnectionString("TelegramBotDataBase");
+builder.Services.AddDbContext<TelegramBotDbContext>(options => options.UseNpgsql(connectionString));
+
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+
+// Регистрация профиля AutoMapper
+builder.Services.AddAutoMapper(typeof(Application.MappingProfiles.PersonProfile));
+builder.Services.AddAutoMapper(typeof(Application.MappingProfiles.CustomFieldListConverter));
+
+builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddScoped<PersonService>();
 
 var app = builder.Build();
 
@@ -14,31 +32,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseRouting();
+
+app.MapControllers();
+
+/*app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); // Этот метод определяет маршруты для контроллеров, которые вы определили в вашем приложении
+});*/
+
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
-
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

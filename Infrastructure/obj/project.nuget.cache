@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fw7hB9KJSSzkqlCWXNqLjQmPstvcXKl2BmGKxyvP2LkEjIuKn+rZXtB3z9mq72IoTP393hUjT79IQvW7l1kP+g==",
+  "dgSpecHash": "gFQrTDrx51WsmfDS6VN1k7BQ/ZdGGyR/PJjTpIzla7Q1A3Syz40AEvc7xW2MRLGm6mN10vVrQrfXFYb0sJN09w==",
   "success": true,
   "projectFilePath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anna\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.3\\microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
@@ -57,5 +58,16 @@
     "C:\\Users\\Anna\\.nuget\\packages\\system.text.json\\9.0.0-preview.3.24172.9\\system.text.json.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -35,10 +35,15 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<DateTime?>("PersonCreationDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("Value")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PersonCreationDate");
 
                     b.ToTable("CustomFields");
                 });
@@ -70,6 +75,13 @@ namespace Infrastructure.Migrations
                     b.ToTable("Persons");
                 });
 
+            modelBuilder.Entity("Domain.Entities.CustomField<string>", b =>
+                {
+                    b.HasOne("Domain.Entities.Person", null)
+                        .WithMany("CustomFields")
+                        .HasForeignKey("PersonCreationDate");
+                });
+
             modelBuilder.Entity("Domain.Entities.Person", b =>
                 {
                     b.OwnsOne("Domain.ValueObject.FullName", "FullName", b1 =>
@@ -96,35 +108,13 @@ namespace Infrastructure.Migrations
                                 .HasForeignKey("PersonCreationDate");
                         });
 
-                    b.OwnsOne("System.Collections.Generic.List<Domain.Entities.CustomField<string>>", "CustomFields", b1 =>
-                        {
-                            b1.Property<DateTime>("PersonCreationDate")
-                                .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Capacity")
-                                .HasColumnType("integer");
-
-                            b1.Property<string>("Name")
-                                .IsRequired()
-                                .HasColumnType("text");
-
-                            b1.Property<string>("Value")
-                                .IsRequired()
-                                .HasColumnType("text");
-
-                            b1.HasKey("PersonCreationDate");
-
-                            b1.ToTable("Persons");
-
-                            b1.WithOwner()
-                                .HasForeignKey("PersonCreationDate");
-                        });
-
-                    b.Navigation("CustomFields")
-                        .IsRequired();
-
                     b.Navigation("FullName")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.Person", b =>
+                {
+                    b.Navigation("CustomFields");
                 });
 #pragma warning restore 612, 618
         }

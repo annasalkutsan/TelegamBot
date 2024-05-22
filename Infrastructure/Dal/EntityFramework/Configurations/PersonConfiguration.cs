@@ -23,8 +23,8 @@ public class PersonsConfiguration:IEntityTypeConfiguration<Person>
         builder.Property(x => x.BirthDay).IsRequired();
         builder.Property(x => x.PhoneNumber).IsRequired();
         builder.Property(x => x.Telegram).IsRequired();
-        builder.Property(x => x.Gender).IsRequired();
-        
+        builder.Property(x => x.Gender).IsRequired(); 
+        builder.Property(x => x.CreationDate).IsRequired(); 
         //новое свойство, после создаем новую миграцию, даем имя => updatedb. так после каждого обновления кода
         //TODO: дописать свойства кроме возраста
 

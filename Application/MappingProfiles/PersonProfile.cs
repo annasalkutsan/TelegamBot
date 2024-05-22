@@ -22,6 +22,9 @@ namespace Application.MappingProfiles
             //PersonUpdateRequest в PersonUpdateResponse
             CreateMap<PersonUpdateRequest, PersonUpdateResponse>();
 
+            //Person в PersonUpdateResponse
+            CreateMap<Person, PersonUpdateResponse>();
+            
             //Person в список пользовательских полей
             //ConvertUsing -- для явного указания способа преобразования одного объекта в другой при маппинге
             CreateMap<Person, List<CustomField<string>>>().ConvertUsing<CustomFieldListConverter>();
