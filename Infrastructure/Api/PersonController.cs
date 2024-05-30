@@ -30,6 +30,8 @@ public class PersonController:ControllerBase
     {
         var createdPerson = personService.Create(personCreateRequest);
         //return CreatedAtAction(nameof(GetById), new { id = createdPerson.Id }, createdPerson);
+        if (createdPerson == null)
+            return BadRequest();
         return Ok();
     }
     
@@ -53,10 +55,10 @@ public class PersonController:ControllerBase
         return NoContent();
     }
     
-    [HttpGet("customfields")]
-    public IActionResult GetCustomFields([FromServices] PersonService personService)
+    [HttpGet("{id}/customfields")]
+    public IActionResult GetCustomFields(Guid id, [FromServices] PersonService personService)
     {
-        var customFields = personService.GetCustomFields();
+        var customFields = personService.GetCustomFields(id);
         return Ok(customFields);
     }
 }

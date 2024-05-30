@@ -13,7 +13,7 @@ public class PersonsConfiguration:IEntityTypeConfiguration<Person>
     public void Configure(EntityTypeBuilder<Person> builder)
     {
         builder.HasKey(x => x.Id);
-        builder.HasKey(x => x.CreationDate);
+        builder.Property(x => x.CreationDate).IsRequired();
         builder.OwnsOne(x => x.FullName, fullName =>
         {
             fullName.Property(x => x.FirstName).IsRequired();
@@ -24,7 +24,7 @@ public class PersonsConfiguration:IEntityTypeConfiguration<Person>
         builder.Property(x => x.PhoneNumber).IsRequired();
         builder.Property(x => x.Telegram).IsRequired();
         builder.Property(x => x.Gender).IsRequired(); 
-        builder.Property(x => x.CreationDate).IsRequired(); 
+        //builder.Property(x => x.CreationDate).IsRequired(); 
         //новое свойство, после создаем новую миграцию, даем имя => updatedb. так после каждого обновления кода
         //TODO: дописать свойства кроме возраста
 

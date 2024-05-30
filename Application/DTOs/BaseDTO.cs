@@ -6,6 +6,7 @@ namespace Application.DTOs
 {
     public class BaseDTO
     {
+        public DateTime CreationDate { get; set; }
         public Guid Id;
         public FullName FullName { get; set; }
         public DateTime BirthDay { get; set; }

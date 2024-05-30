@@ -16,6 +16,9 @@ namespace Application.MappingProfiles
             //PersonGetAllResponse в Person
             CreateMap<PersonGetAllResponse, Person>();
 
+            //Person в PersonGetAllResponse 
+            CreateMap<Person,PersonGetAllResponse>();
+            
             //PersonCreateRequest в Person
             CreateMap<PersonCreateRequest, Person>();
 

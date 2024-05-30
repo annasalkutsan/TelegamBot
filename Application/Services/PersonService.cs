@@ -62,10 +62,9 @@ namespace Application.Services
             return _personRepository.Delete(id);
         }
 
-        public List<CustomField<string>> GetCustomFields()
+        public List<CustomField<string>> GetCustomFields(Guid personId)
         {
-            return _personRepository.GetCustomFields();
+            return _personRepository.GetCustomFields(personId);
         }
-
     }
 }

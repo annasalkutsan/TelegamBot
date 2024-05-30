@@ -27,7 +27,6 @@ namespace Domain.Entities
             PhoneNumber = phoneNumber;
             Telegram = telegram;
             Gender = gender;
-            CreationDate = DateTime.Now; 
             CustomFields = customFields;
 
             var validator = new PersonValidator();
@@ -40,8 +39,6 @@ namespace Domain.Entities
         public string PhoneNumber { get; set; }
         public string Telegram { get; set; }
         public Gender Gender { get; set; }
-        //[Required]
-        public DateTime CreationDate { get; set; }
         public List<CustomField<string>> CustomFields { get; set; }
 
         public Person Update(string? fistName, string? lastName, string? middleName, string phoneNumber)

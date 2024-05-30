@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "e40ffdd4-4183-460e-b899-58434117fb83",
+		"name": "TGBot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34571325"
+	},
+	"item": [
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5296/api/Person/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Person",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"creationDate\": \"2024-05-30T12:59:28.632Z\",\n  \"fullName\": {\n    \"firstName\": \"Max\",\n    \"lastName\": \"Kart\",\n    \"middleName\": \"Steev\"\n  },\n  \"birthDay\": \"2001-03-11T12:59:28.632Z\",\n  \"phoneNumber\": \"+37377957279\",\n  \"telegram\": \"@kart\",\n  \"gender\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5296/api/Person/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Person",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"e2424243-7d33-423d-8fd2-18058512fb71\",\n  \"firstName\": \"Teo\",\n  \"lastName\": \"Smeeth\",\n  \"middleName\": \"John\",\n  \"phoneNumber\": \"+37377857458\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5296/api/Person/e2424243-7d33-423d-8fd2-18058512fb71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Person",
+						"e2424243-7d33-423d-8fd2-18058512fb71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5296/api/Person/3099d8b5-db44-4a67-b35f-a300cccb6b66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Person",
+						"3099d8b5-db44-4a67-b35f-a300cccb6b66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5296/api/Person/e2424243-7d33-423d-8fd2-18058512fb71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Person",
+						"e2424243-7d33-423d-8fd2-18058512fb71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customfields by person id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5296/api/Person/9e901450-9553-4209-91b3-4b10d7db41de/customfields",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Person",
+						"9e901450-9553-4209-91b3-4b10d7db41de",
+						"customfields"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

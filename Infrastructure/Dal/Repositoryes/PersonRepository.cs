@@ -1,6 +1,7 @@
 using Application.Interfaces;
 using Domain.Entities;
 using Infrastructure.Dal.EntityFramework;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Dal.Repositoryes;
 
@@ -56,9 +57,20 @@ public class PersonRepository:IPersonRepository
         await _telegramBotDbContext.SaveChangesAsync();
     }
 
-    public List<CustomField<string>> GetCustomFields()
+    public List<CustomField<string>> GetCustomFields(Guid personId)
     {
-        var customFields = _telegramBotDbContext.CustomFields.ToList();
-        return customFields;
+        // Получить персону по идентификатору вместе с ее связанными пользовательскими полями
+        var personWithCustomFields = _telegramBotDbContext.Persons
+            .Include(p => p.CustomFields)
+            .FirstOrDefault(p => p.Id == personId);
+
+        // Если персона не найдена, вернуть пустой список пользовательских полей
+        if (personWithCustomFields == null)
+        {
+            return new List<CustomField<string>>();
+        }
+
+        // Вернуть пользовательские поля для найденной персоны
+        return personWithCustomFields.CustomFields.ToList();
     }
 }

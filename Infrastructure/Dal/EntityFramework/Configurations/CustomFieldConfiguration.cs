@@ -10,6 +10,8 @@ public class CustomFieldConfiguration:IEntityTypeConfiguration<CustomField<strin
 {
     public void Configure(EntityTypeBuilder<CustomField<string>> builder)
     {
+        builder.HasKey(x => x.Id);
+        builder.Property(x => x.CreationDate).IsRequired();
         builder.Property<string>(x => x.Name).IsRequired();
         builder.Property<string>(x => x.Value).IsRequired();
     }
