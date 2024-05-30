@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj": {}
+    "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj": {
+    "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
-        "outputPath": "D:\\Рабочий стол\\Git\\TelegamBot\\Domain\\obj\\",
+        "outputPath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

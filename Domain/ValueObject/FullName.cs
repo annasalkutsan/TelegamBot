@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Validators;
 
 namespace Domain.ValueObject
 {
@@ -20,9 +21,6 @@ namespace Domain.ValueObject
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        // может быть отчеством
-        // ? -- может быть null
         public string? MiddleName { get; set; } = null;
         /// <summary>
         /// Реализация DeepCompare с рефлексией
@@ -59,6 +57,26 @@ namespace Domain.ValueObject
         public FullName DeepClone()
         {
             return new FullName(FirstName, LastName, MiddleName);
+        }
+
+        public FullName Update(string? firstName, string? lastName, string? middleName)
+        {
+            if (firstName is not null)
+            {
+                FirstName = firstName;
+            }
+            if (lastName is not null)
+            {
+                LastName = lastName;
+            }
+            if (middleName is not null)
+            {
+                MiddleName = middleName;
+            }
+
+            var validator = new FullNameValidator();
+            validator.Validate(this);
+            return this;
         }
     }
 }
