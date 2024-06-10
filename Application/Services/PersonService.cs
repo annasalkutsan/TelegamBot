@@ -43,8 +43,7 @@ namespace Application.Services
             var createdDto = _mapper.Map<PersonCreateResponse>(createdPerson); // Преобразуем созданную сущность Person в DTO
             return createdDto; // Возвращаем DTO
         }
-        //Почитать про отложенное сохранение в EF и SaveChanges
-        //Разобраться с подключением маппера в целый проект
+       
         public async Task<PersonUpdateResponse> Update(PersonUpdateRequest personUpdateRequest)
         {
             var person = _personRepository.GetById(personUpdateRequest.Id);

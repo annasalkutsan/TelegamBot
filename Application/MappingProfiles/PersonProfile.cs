@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Application.DTOs;
 using AutoMapper;
 using Domain.Entities;
@@ -12,10 +11,10 @@ namespace Application.MappingProfiles
             //Person в PersonGetByResponse
             CreateMap<Person, PersonGetByResponse>()
                 .ForMember(dst => dst.Id, opt => opt.MapFrom(src => src.Id));
-
+            
             //PersonGetAllResponse в Person
             CreateMap<PersonGetAllResponse, Person>();
-
+            
             //Person в PersonGetAllResponse 
             CreateMap<Person,PersonGetAllResponse>();
             

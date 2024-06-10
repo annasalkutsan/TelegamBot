@@ -73,4 +73,15 @@ public class PersonRepository:IPersonRepository
         // Вернуть пользовательские поля для найденной персоны
         return personWithCustomFields.CustomFields.ToList();
     }
+
+    public List<Person> GetPersonsByBirthday()
+    {
+        DateTime today = DateTime.Today;
+    
+        // Фильтруем персоны по совпадению месяца и дня даты рождения с текущей датой
+        List<Person> persons = GetAll(); // Предположим, что у вас есть метод GetAll() для получения всех персон
+        List<Person> filteredPersons = persons.Where(p => p.BirthDay.Month == today.Month && p.BirthDay.Day == today.Day).ToList();
+    
+        return filteredPersons;
+    }
 }

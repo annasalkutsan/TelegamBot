@@ -24,6 +24,9 @@
         <PackageReference Include="Npgsql" Version="8.0.2" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-preview.3" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="2.0.0-preview1" />
+        <PackageReference Include="Quartz" Version="3.9.0" />
+        <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.9.0" />
+        <PackageReference Include="Quartz.Extensions.Hosting" Version="3.9.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 

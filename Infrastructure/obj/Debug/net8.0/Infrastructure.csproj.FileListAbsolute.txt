@@ -123,3 +123,17 @@ D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\obj\Debug\ne
 D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\AutoMapper.dll
 D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\Application.dll
 D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\Application.pdb
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\Quartz.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Рабочий стол\Rider projects\TelegamBot\Infrastructure\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

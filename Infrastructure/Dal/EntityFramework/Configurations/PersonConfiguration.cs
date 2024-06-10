@@ -8,8 +8,6 @@ namespace Infrastructure.Dal.EntityFramework.Configurations;
 /// </summary>
 public class PersonsConfiguration:IEntityTypeConfiguration<Person>
 {
-    //набор персон в базу 
-
     public void Configure(EntityTypeBuilder<Person> builder)
     {
         builder.HasKey(x => x.Id);
@@ -24,9 +22,5 @@ public class PersonsConfiguration:IEntityTypeConfiguration<Person>
         builder.Property(x => x.PhoneNumber).IsRequired();
         builder.Property(x => x.Telegram).IsRequired();
         builder.Property(x => x.Gender).IsRequired(); 
-        //builder.Property(x => x.CreationDate).IsRequired(); 
-        //новое свойство, после создаем новую миграцию, даем имя => updatedb. так после каждого обновления кода
-        //TODO: дописать свойства кроме возраста
-
     }
 }

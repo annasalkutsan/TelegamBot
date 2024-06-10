@@ -4,8 +4,12 @@ using Application.Services;
 using Infrastructure.Dal.EntityFramework;
 using Infrastructure.Dal.Repositoryes;
 using Microsoft.EntityFrameworkCore;
-using AutoMapper; 
 using Application.MappingProfiles;
+using Infrastructure.Dal.EntityFramework.Configurations;
+using Infrastructure.Jobs;
+using Microsoft.Extensions.Options;
+using Quartz;
+using Quartz.Simpl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,21 +23,35 @@ builder.Services.AddDbContext<TelegramBotDbContext>(options => options.UseNpgsql
 
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
-// Регистрация профиля AutoMapper
-builder.Services.AddAutoMapper(typeof(Application.MappingProfiles.PersonProfile));
-builder.Services.AddAutoMapper(typeof(Application.MappingProfiles.CustomFieldListConverter));
-//builder.Services.AddAutoMapper(typeof(Program));
 // Регистрация профилей AutoMapper
+builder.Services.AddAutoMapper(typeof(PersonProfile));
+builder.Services.AddAutoMapper(typeof(CustomFieldListConverter));
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-///todo разобраться с постман, протестить апи, сохраненный в колеекциях. и ее экспортировать коллекцию и прикрепить кудато файлом в инфраструктуру.
-/// потом сделать предыдущую домашку
-///  !!!! иии
-/// попробовать отельным сайт проектом сделать прогу получение логин пароль, токен дс и делаем какое-то действие типа лайка
-/// не свой аккаунт ибо могут забанить
-/// не через бота *
-
 builder.Services.AddScoped<PersonService>();
+
+// Регистрация конфигурации CronExpressionOptions
+builder.Services.Configure<CronExpressionOptions>(builder.Configuration.GetSection("CronExpression"));
+
+// Чтение cron-выражения из типизированной конфигурации
+builder.Services.AddQuartz(x =>
+{
+    x.UseJobFactory<MicrosoftDependencyInjectionJobFactory>();
+
+    var jobKey = new JobKey("PersonFindBirthDaysJob");
+    x.AddJob<PersonFindBirthDaysJob>(opt => opt.WithIdentity(jobKey));
+
+    var triggerKey = new TriggerKey("TestJobTrigger");
+    // Получение настроек cron-выражения через IOptions
+    var cronOptions = builder.Services.BuildServiceProvider().GetRequiredService<IOptions<CronExpressionOptions>>().Value;
+    x.AddTrigger(opts => opts.ForJob(jobKey).WithIdentity(triggerKey)
+        .WithCronSchedule(cronOptions.TestJobExpression));
+});
+
+builder.Services.AddQuartzHostedService(opts =>
+{
+    opts.WaitForJobsToComplete = true;
+});
 
 var app = builder.Build();
 
@@ -47,11 +65,6 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 
 app.MapControllers();
-
-/*app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers(); // Этот метод определяет маршруты для контроллеров, которые вы определили в вашем приложении
-});*/
 
 app.UseHttpsRedirection();
 

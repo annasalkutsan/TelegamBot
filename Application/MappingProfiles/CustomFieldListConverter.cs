@@ -7,7 +7,14 @@ namespace Application.MappingProfiles
 {
     public class CustomFieldListConverter : ITypeConverter<Person, List<CustomField<string>>>
     {
-        // Convert, который преобразовывает объекты типа Person в List<CustomField<string>>
+        
+        /// <summary>
+        /// Convert, который преобразовывает объекты типа Person в List<CustomField<string>>
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="destination"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public List<CustomField<string>> Convert(Person source, List<CustomField<string>> destination, ResolutionContext context)
         {
             // source - исходный объект, который нужно преобразовать
