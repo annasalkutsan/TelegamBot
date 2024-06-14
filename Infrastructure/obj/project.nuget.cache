@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pfmG9L0lvgHgldM7s1G9EmujUhawPU3iN5lb0uxILq7jbe+lqm+Yr9TzUStXcbHwnj0ZgNZOy6qlviqtKp8AnA==",
+  "dgSpecHash": "eYtf6q5Geo88wFsqKH6Xam2wWOIoYrPeFue1y1YPqvClECDK4Ig87xxgPdQ0SdyrOcDDOEMCsoYJHW2ZTB0Svg==",
   "success": true,
   "projectFilePath": "D:\\Рабочий стол\\Rider projects\\TelegamBot\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,7 @@
     "C:\\Users\\Anna\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\mono.texttemplating\\3.0.0-preview-0052-g5d0f76c785\\mono.texttemplating.3.0.0-preview-0052-g5d0f76c785.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.0-preview.3\\npgsql.entityframeworkcore.postgresql.9.0.0-preview.3.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.design\\2.0.0-preview1\\npgsql.entityframeworkcore.postgresql.design.2.0.0-preview1.nupkg.sha512",
@@ -70,7 +71,8 @@
     "C:\\Users\\Anna\\.nuget\\packages\\system.text.encodings.web\\9.0.0-preview.3.24172.9\\system.text.encodings.web.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\system.text.json\\9.0.0-preview.3.24172.9\\system.text.json.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Anna\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\telegram.bot\\20.0.0-alpha.1\\telegram.bot.20.0.0-alpha.1.nupkg.sha512"
   ],
   "logs": [
     {

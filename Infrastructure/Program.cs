@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Application.MappingProfiles;
 using Infrastructure.Dal.EntityFramework.Configurations;
 using Infrastructure.Jobs;
+using Infrastructure.Settings;
 using Microsoft.Extensions.Options;
 using Quartz;
 using Quartz.Simpl;
@@ -24,28 +25,33 @@ builder.Services.AddDbContext<TelegramBotDbContext>(options => options.UseNpgsql
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
 // Регистрация профилей AutoMapper
-builder.Services.AddAutoMapper(typeof(PersonProfile));
-builder.Services.AddAutoMapper(typeof(CustomFieldListConverter));
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddAutoMapper(typeof(Program));
+//builder.Services.AddAutoMapper(typeof(CustomFieldListConverter));
+//builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddScoped<PersonService>();
 
 // Регистрация конфигурации CronExpressionOptions
-builder.Services.Configure<CronExpressionOptions>(builder.Configuration.GetSection("CronExpression"));
-
+builder.Services.Configure<CronExpression>(builder.Configuration.GetSection(nameof (CronExpressionSettings)));
+builder.Services.Configure<TelegramSettings>(builder.Configuration.GetSection(nameof (TelegramSettings)));
 // Чтение cron-выражения из типизированной конфигурации
 builder.Services.AddQuartz(x =>
 {
-    x.UseJobFactory<MicrosoftDependencyInjectionJobFactory>();
+    var cronExpressionSettings = builder.Configuration.GetSection( nameof (CronExpressionSettings)).Get<CronExpressionSettings>();
+    
+    //x.UseJobFactory<MicrosoftDependencyInjectionJobFactory>();
 
     var jobKey = new JobKey("PersonFindBirthDaysJob");
+    
     x.AddJob<PersonFindBirthDaysJob>(opt => opt.WithIdentity(jobKey));
 
-    var triggerKey = new TriggerKey("TestJobTrigger");
+    var triggerKey = new TriggerKey("PersonFindBirthDaysJobTrigger");
+    
     // Получение настроек cron-выражения через IOptions
-    var cronOptions = builder.Services.BuildServiceProvider().GetRequiredService<IOptions<CronExpressionOptions>>().Value;
+    //var cronOptions = builder.Services.BuildServiceProvider().GetRequiredService<IOptions<CronExpressionOptions>>().Value;
+    
     x.AddTrigger(opts => opts.ForJob(jobKey).WithIdentity(triggerKey)
-        .WithCronSchedule(cronOptions.TestJobExpression));
+        .WithCronSchedule(cronExpressionSettings.PersonFindBirthdaysJob));
 });
 
 builder.Services.AddQuartzHostedService(opts =>

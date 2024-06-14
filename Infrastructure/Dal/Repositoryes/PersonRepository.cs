@@ -74,14 +74,17 @@ public class PersonRepository:IPersonRepository
         return personWithCustomFields.CustomFields.ToList();
     }
 
-    public List<Person> GetPersonsByBirthday()
+    public async Task<List<Person>> GetBirthdayPersons(DateTime dateTime)
     {
-        DateTime today = DateTime.Today;
+        var persons = _telegramBotDbContext.Persons.Where(x => x.BirthDay.Day == dateTime.Day && x.BirthDay.Month == dateTime.Month);
+        return await persons.ToListAsync();
+        
+        /*DateTime today = DateTime.Today;
     
         // Фильтруем персоны по совпадению месяца и дня даты рождения с текущей датой
         List<Person> persons = GetAll(); // Предположим, что у вас есть метод GetAll() для получения всех персон
         List<Person> filteredPersons = persons.Where(p => p.BirthDay.Month == today.Month && p.BirthDay.Day == today.Day).ToList();
     
-        return filteredPersons;
+        return filteredPersons;*/
     }
 }
